@@ -1,33 +1,6 @@
-<%= form_for(@video) do |f| %>
-  <% if @video.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
-
-      <ul>
-      <% @video.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :timeline %><br />
-    <%= f.text_field :timeline %>
-  </div>
-  <div class="field">
-    <%= f.label :video_url %><br />
-    <%= f.text_field :video_url %>
-  </div>
-  <div class="field">
-    <%= f.label :video_time %><br />
-    <%= f.text_field :video_time %>
-  </div>
-  <div class="field">
-    <%= f.label :topic %><br />
-    <%= f.text_field :topic %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div style="display:none">
+<form action="/videos" class="new_bookmark" id="new_bookmark" method="post" name="autoSubmit">
+<input type="text" id="time1" name="video[video_time]" />
+<input type="text" id="topic" name="video[topic]" />
+</form>
+</div>		

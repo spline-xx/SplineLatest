@@ -41,10 +41,11 @@ class VideosController < ApplicationController
   # POST /videos.xml
   def create
     @video = Video.new(params[:video])
-
+    @video.video_url="/RandyPausch.flv"
+    @video.timeline=@video.video_time
     respond_to do |format|
       if @video.save
-        format.html { redirect_to(@video, :notice => 'Video was successfully created.') }
+        format.html { redirect_to  "/" }
         format.xml  { render :xml => @video, :status => :created, :location => @video }
       else
         format.html { render :action => "new" }

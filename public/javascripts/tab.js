@@ -1,16 +1,11 @@
- $(function(){
-            // Fast and dirty
-            $('article.tabs section > h3').click(function(){
-                $('article.tabs section').removeClass('current');
-                $(this)
-                .closest('section').addClass('current');
-          });
-   });
 
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  try {
-            var pageTracker = _gat._getTracker("UA-6539535-1");
-            pageTracker._trackPageview();
-  } catch(err) {}
-
+function chane123(){
+document.getElementById("time1").value =player.getTime();
+ player.pause();
+var topic=prompt("Please enter the topic","");
+document.getElementById("topic").value=topic;
+autoSubmit.submit();
+ 
+  
+  
+};

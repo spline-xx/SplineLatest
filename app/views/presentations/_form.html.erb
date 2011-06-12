@@ -1,0 +1,33 @@
+<%= form_for(@presentation) do |f| %>
+  <% if @presentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+      <% @presentation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :timeline %><br />
+    <%= f.text_field :timeline %>
+  </div>
+  <div class="field">
+    <%= f.label :ppt_url %><br />
+    <%= f.text_field :ppt_url %>
+  </div>
+  <div class="field">
+    <%= f.label :ppt_time %><br />
+    <%= f.text_field :ppt_time %>
+  </div>
+  <div class="field">
+    <%= f.label :ppt_topic %><br />
+    <%= f.text_field :ppt_topic %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

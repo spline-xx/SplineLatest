@@ -1,0 +1,29 @@
+<h1>Listing presentations</h1>
+
+<table>
+  <tr>
+    <th>Timeline</th>
+    <th>Ppt url</th>
+    <th>Ppt time</th>
+    <th>Ppt topic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @presentations.each do |presentation| %>
+  <tr>
+    <td><%= presentation.timeline %></td>
+    <td><%= presentation.ppt_url %></td>
+    <td><%= presentation.ppt_time %></td>
+    <td><%= presentation.ppt_topic %></td>
+    <td><%= link_to 'Show', presentation %></td>
+    <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+    <td><%= link_to 'Destroy', presentation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Presentation', new_presentation_path %>

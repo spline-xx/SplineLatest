@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Timeline:</b>
+  <%= @whiteboard.timeline %>
+</p>
+
+<p>
+  <b>Wb url:</b>
+  <%= @whiteboard.wb_url %>
+</p>
+
+<p>
+  <b>Wb time:</b>
+  <%= @whiteboard.wb_time %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @whiteboard.topic %>
+</p>
+
+
+<%= link_to 'Edit', edit_whiteboard_path(@whiteboard) %> |
+<%= link_to 'Back', whiteboards_path %>

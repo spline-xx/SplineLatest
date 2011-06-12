@@ -1,0 +1,2 @@
+module SplineHelper
+end

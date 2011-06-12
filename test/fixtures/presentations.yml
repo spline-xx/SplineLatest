@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  timeline: 9.99
+  ppt_url: MyString
+  ppt_time: 9.99
+  ppt_topic: MyString
+
+two:
+  timeline: 9.99
+  ppt_url: MyString
+  ppt_time: 9.99
+  ppt_topic: MyString

@@ -4,6 +4,7 @@ document.getElementById("time1").value =player.getTime();
  player.pause();
 var topic=prompt("Please enter the topic","");
 document.getElementById("topic").value=topic;
+if (topic!=null && topic!="")
 autoSubmit.submit();
  
   

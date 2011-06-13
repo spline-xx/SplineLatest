@@ -1,0 +1,8 @@
+
+<table style="width:260px;height:800px" id="topic1">
+<%= presentations.each do |presentation|%>
+	<tr>
+	<td bgcolor="#ffffff" onMouseOver="imageS(<%= presentation.ppt_number%>)" onclick="change(<%= presentation.ppt_time%>,<%= presentation.ppt_number%>)"><%= presentation.ppt_topic%></td>
+	</tr>
+<% end %>
+</table>

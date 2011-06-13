@@ -52,3 +52,12 @@ window.setInterval(function(){
 	
 }, 1500);
 
+
+	alert("da");
+	var t = document.getElementById("topic1").getElementsByTagName("td");
+    for ( var i = 1; i < t.length; i+=2 )
+    {
+    	t[i].innerHTML= "#";
+    }
+};
+

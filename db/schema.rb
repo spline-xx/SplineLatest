@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110612155449) do
+ActiveRecord::Schema.define(:version => 20110613070214) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -21,12 +21,13 @@ ActiveRecord::Schema.define(:version => 20110612155449) do
   end
 
   create_table "presentations", :force => true do |t|
-    t.decimal  "timeline"
     t.string   "ppt_url"
-    t.decimal  "ppt_time"
     t.string   "ppt_topic"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "timeline"
+    t.string   "ppt_time"
+    t.decimal  "ppt_number"
   end
 
   create_table "videos", :force => true do |t|

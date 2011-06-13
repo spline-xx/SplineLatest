@@ -10,13 +10,8 @@ autoSubmit.submit();
   
 };
 
-function change(a,j){
+function change(a){
 	player.seek(a);
-	var x="";
-
- 				x=x+"/images/pausch/img"+(j-1)+".gif";
-
- 			document.getElementById('imageSource').src=x;
 
 };
 function imageS(j)
@@ -33,31 +28,26 @@ function imageS(j)
  		var flag=0;
 
 window.setInterval(function(){
-	document.getElementById("url1").value=document.getElementById("pointer").style.left;
-	if(flag==0)
-	j=j+5;
-	document.getElementById("pointer").style.left=j+"px";
-	var t = document.getElementById("topics").getElementsByTagName("td");
-	var t1 = document.getElementById("topic1").getElementsByTagName("td");
+	//document.getElementById("url1").value=document.getElementById("pointer").style.left;
+	//if(flag==0)
+	//j=j+5;
+	//document.getElementById("pointer").style.left=j+"px";
+	var t = document.getElementById("topic123").getElementsByTagName("td");
+	if(player.getState()==3)
+	{
     for ( var i = 1; i < t.length; i+=3 )
     {
   //  var t1=t[i].innerHTML();
-    if(Math.round(t[i].innerHTML)==Math.round(player.getTime()))
+   if(Math.round(t[i].innerHTML)<=Math.round(player.getTime()))
     {
     	
+    	if(Math.round(t[i+3].innerHTML)>=Math.round(player.getTime()))	
     	imageS(t[i+1].innerHTML);
-    	 t1[t[i+1].innerHTML].style.fontWeight="bold";
     }
    }
+  }
 	
 }, 1500);
 
 
-	alert("da");
-	var t = document.getElementById("topic1").getElementsByTagName("td");
-    for ( var i = 1; i < t.length; i+=2 )
-    {
-    	t[i].innerHTML= "#";
-    }
-};
 

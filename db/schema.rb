@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110613070214) do
+ActiveRecord::Schema.define(:version => 20110613085524) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20110613070214) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "timeline"
-    t.string   "ppt_time"
     t.decimal  "ppt_number"
+    t.decimal  "ppt_time"
   end
 
   create_table "videos", :force => true do |t|
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20110613070214) do
     t.string   "topic"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "timeline"
     t.string   "video_time"
+    t.string   "timeline"
   end
 
   create_table "whiteboards", :force => true do |t|

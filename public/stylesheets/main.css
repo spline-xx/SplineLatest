@@ -1,0 +1,46 @@
+/*body {
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+}
+
+h1,h2	{
+	color:#636363;
+}
+*/
+
+#myCanvas	{
+	width:800px;
+	padding:15px;
+	color:#636363;
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+#myCanvas canvas	{
+	border: 3px solid; margin: 0 auto;
+}
+
+#myCanvas canvas:hover	{
+	cursor:crosshair;
+}
+
+#myCanvas #slider	{
+	width:300px;
+}
+
+
+#myCanvas #panel	{
+	margin:auto;
+}
+
+#myCanvas #panel td	{
+	padding:15px;
+	border:1px solid #636363;
+}
+/*
+footer,footer a	{
+	color: #636363;
+}
+*/
+

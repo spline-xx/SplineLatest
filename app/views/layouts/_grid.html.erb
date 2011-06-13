@@ -1,0 +1,76 @@
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/mbContainer.css" title="style"  media="screen"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/javascripts/inc/jquery.metadata.js"></script>
+  <script type="text/javascript" src="/javascripts/inc/mbContainer.js"></script>
+  <script type="text/javascript">
+ $(function(){
+      $(".containerPlus").buildContainers({
+        containment:"document",
+        elementsPath:"elements/",
+        onClose:function(o){},
+        onIconize:function(o){},
+        effectDuration:200
+      });
+
+      if (!$("#demoContainer").mb_getState("closed")){
+        $('#close').fadeIn();$('#actions').fadeIn(); $("#open").hide(); $('#open_change').hide();
+      }
+    });
+</script>
+<style text/css>
+
+
+    .wrapper{
+      font-family:Arial, Helvetica, sans-serif;
+      margin-top:100px;
+      margin-left:50px;
+    }
+
+</style>
+<body>
+
+    <div id="video" style="position:absolute;left:310px;top:140px;width:520px;height:360px;border:1px solid black;">
+
+        <%= render 'videos/index' %>
+    </div>
+<!-- POWERPOINT SLIDES -->
+    <div id="powerpoint" style="position:absolute;left:840px;top:140px;width:400px;height:300px;">
+   <button style="margin-left:440px;width:15px;height:17px;background-image: url('maximizeButton.png');" id="open"             onclick="$('#demoContainer').mb_open(); $('#close').fadeIn();$('#actions').fadeIn(); $(this).hide();" ></button>
+
+      <%= render 'presentations/index' %>
+
+  </div>
+ 	  <div class="containerPlus draggable resizable { skin:'default', width:'500' }" style="top:300px; left:30%">
+   	  <div id="dock"> </div><div style="clear:both;"></div>
+	  </div>
+
+
+ <div id="demoContainer" class="containerPlus draggable resizable {buttons:'m',skin:'black', width:'520',dock:'dock',closed:'true', rememberMe:true}" style="position:absolute;top:100px;left:400px; height:100%">
+<button id="close" onclick="$('#demoContainer').mb_close(); $('#actions').fadeOut(); $('#open').fadeIn(); $(this).hide();" style="margin-left:440px;positon:fixed;top:100px;width:20px;height:17px;background-image: url('close1.png');"></button>
+<div id="actions" style="display:none;">
+
+  <button id="fullscreen" onclick="$('#demoContainer').mb_fullscreen();">fullscreen</button>
+    <button id="center" onclick="$('#demoContainer').mb_centerOnWindow(true);">center on window</button>
+    <button id="resize" onclick="$('#demoContainer').mb_resizeTo(600,600);">resize to 600 x 600</button><br>
+</div>
+<div id="new3" style="overflow:auto;width:100%;height:100%;padding:10px; margin-left:10px"">
+<img style="width:100%;height:100%;" src="/images/pausch/img0.gif" id="imageSource" >
+</div>
+</div>
+
+<!-- ............................................... -->
+
+    <div id="scratchpad" style="position:absolute;left:310px;top:510px;width:520px;height:250px;border:1px solid black;">
+    
+    </div>
+    <div id="chat" style="position:absolute;left:840px;top:470px;width:400px;height:580px;border:1px solid black;">
+        <h1>Chat</h1>
+    </div>
+    <div id="comment" style="position:absolute;left:310px;top:770px;width:520px;height:260px;border:1px solid black;">
+        <h1>Comment Box</h1>
+    </div>
+</body>
+

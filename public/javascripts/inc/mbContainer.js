@@ -525,6 +525,7 @@
   };
 
   jQuery.fn.mb_open = function (url,data){
+  	player.hide();
     this.each(function(){
       var container=$(this);
       if (container.mb_getState('closed')){
@@ -563,6 +564,7 @@
   };
 
   jQuery.fn.mb_close = function (){
+  	player.show();
     var el=$(this).get(0);
     var container=$(this);
     if (!container.mb_getState('closed') && !container.mb_getState('iconized')){

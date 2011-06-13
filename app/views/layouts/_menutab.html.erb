@@ -2,8 +2,8 @@
 <article style="position:relative;top:120px;" class="tabs">
         <section>
             <h3>Contents</h3>
-<div id="new3" style="overflow:auto;width:260px;height:300px;padding:10px;">
-
+<div id="new3" style="overflow:auto;width:260px;height:800px;padding:10px;">
+<%= render 'layouts/table'%>
 </div>
   
 
@@ -18,7 +18,7 @@
 <section>
 	<h3>Bookmarks</h3>
 <div style="overflow:auto;width:260px;height:300px;padding:10px;">
-
+<%= render :partial=>"videos/show" , :locals=>{:videos=>Video.find(:all)}%>
 </div>
 </section>
        

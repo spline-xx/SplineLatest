@@ -1,0 +1,7 @@
+<table id="topics" style="border:1px solid black">
+<%= videos.each do |video|%>
+	<tr>
+	<td bgcolor="#ffffff" onclick=change(<%= video.video_time%>,3)><%= video.topic%></td>
+	</tr>
+<% end %>
+</table>

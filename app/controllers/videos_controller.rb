@@ -12,14 +12,14 @@ class VideosController < ApplicationController
 
   # GET /videos/1
   # GET /videos/1.xml
-  def show
-    @video = Video.find(params[:id])
+  # def show
+  #  @video = Video.find(:all)
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @video }
-    end
-  end
+  # respond_to do |format|
+  #    format.html { redirect_to  "/" }
+  #    format.xml  { render :xml => @video }
+  #  end
+ # end
 
   # GET /videos/new
   # GET /videos/new.xml

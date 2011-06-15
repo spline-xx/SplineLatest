@@ -300,7 +300,7 @@
           });
         }
         if (btn[i]=="m"){
-          container.find(".buttonBar:first").append("<img src='"+path+container.attr('skin')+"defaults/min.png' class='collapsedContainer'/>");
+          container.find(".buttonBar:first").append("<img src='"+path+container.attr('skin')+"images/elements/black/min.png' class='collapsedContainer'/>");
           container.find(".collapsedContainer:first").bind("click",function(){container.containerCollapse(opt);});
           container.find(".n:first").bind("dblclick",function(){container.containerCollapse(opt);});
         }
@@ -534,7 +534,7 @@
         var l=Math.floor(container.attr("l"));
         container.css({top:t+"px", left:l+"px"});
         var el=container.get(0);
-        
+
 
         if (!$.browser.msie){
           container.css("opacity",0);
@@ -791,3 +791,4 @@
   };
 
 })(jQuery);
+

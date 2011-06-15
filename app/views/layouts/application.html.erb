@@ -18,13 +18,13 @@
 	<%= javascript_include_tag 'canvas2image' %>
 	<%= javascript_include_tag 'scratchPad' %>
 	<script type="text/javascript" src="/javascripts/jscolor/jscolor.js"></script>
-  	
+
 <script type="text/javascript">
 		window.addEventListener("load",scratchPad.loadPad,true);
 	</script>
 </head>
 <body background="/images/spline-bcgend.jpg" style="background-repeat:repeat-x;width:99%;height:100%;">
-
+<%= render 'layouts/head'%>
 <%= render 'layouts/menu'%>
 <%= render 'layouts/grid'%>
 <%= render 'layouts/footer'%>
@@ -34,3 +34,4 @@
 
 </body>
 </html>
+

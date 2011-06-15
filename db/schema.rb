@@ -10,7 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110613085524) do
+ActiveRecord::Schema.define(:version => 20110614062528) do
+
+  create_table "chats", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -35,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20110613085524) do
     t.string   "topic"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "video_time"
     t.string   "timeline"
+    t.string   "video_time"
   end
 
   create_table "whiteboards", :force => true do |t|

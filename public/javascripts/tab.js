@@ -19,15 +19,15 @@ function imageS(j)
  		{
  			var x="";
 
- 				x=x+"/images/pausch/img"+(j-1)+".gif";
+ 				x=x+"/images/pausch/img"+(j-1)+".gif"; 
 
  			document.getElementById('imageSource').src=x;
 	
 
  		};
  		var j=55;
- 		var flag=0;
-
+ 		var flag=1;
+		var k=65;
 window.setInterval(function(){
 	//document.getElementById("url1").value=document.getElementById("pointer").style.left;
 	//if(flag==0)
@@ -47,8 +47,30 @@ window.setInterval(function(){
     }
    }
   }
+  if(flag==0)
+  {
+  	k=k+5;
+  	document.getElementById("timeline").style.left=k+"px";
+  	
+  }
 	
 }, 1500);
 
-
+function pause()
+{
+			if(flag==0)
+			{
+			flag=1;
+			document.getElementById("play_pause").value="play";
+			player.pause();
+			
+		}
+			else
+			{
+			flag=0;
+			document.getElementById("play_pause").value="pause";
+			player.play();
+			}
+	
+};
 

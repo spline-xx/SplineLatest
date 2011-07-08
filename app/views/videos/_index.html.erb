@@ -7,10 +7,16 @@
 <script>
 
 			var j=0;
+var fd;
 			var player=flowplayer("player", "/swf/flowplayer-3.2.7.swf",{clip: {
+onStart: function () {
+      fd = parseInt(this.getClip().fullDuration, 10);
+      
+   },
 			autoPlay:false,
 			autoBuffering:true,
 			start:5,
+
 			
 				}
 			});

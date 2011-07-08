@@ -27,8 +27,15 @@ function imageS(j)
  		};
  		var j=55;
  		var flag=1;
-		var k=65;
+		var k=65.0;
+		
+		
+		//var clipOb=player.getClip(fullDuration);
+		//var dur=clipOb.fullDuration;
 window.setInterval(function(){
+	var fd=player.getClip().fullDuration;
+	var y=(1000/fd)*player.getTime();
+	y=y+65;
 	//document.getElementById("url1").value=document.getElementById("pointer").style.left;
 	//if(flag==0)
 	//j=j+5;
@@ -46,15 +53,17 @@ window.setInterval(function(){
     	imageS(t[i+1].innerHTML);
     }
    }
-  }
-  if(flag==0)
-  {
-  	k=k+5;
-  	document.getElementById("timeline").style.left=k+"px";
+  
   	
+  	document.getElementById("timeline").style.left=y+"px";
+  	document.getElementById("play_pause").value="pause";
+  
   }
+  else
+  document.getElementById("play_pause").value=y;
+  
 	
-}, 1500);
+}, 1000);
 
 function pause()
 {
@@ -73,4 +82,3 @@ function pause()
 			}
 	
 };
-

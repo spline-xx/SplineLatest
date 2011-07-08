@@ -1,0 +1,8 @@
+<h1>All presentations</h1>
+<ul>
+<% for presentation in @presentations %>
+  <li><a href="/presentations/<%= presentation.id %>"><%= presentation.ppt_topic %></a>
+  [<a href="/presentations/<%= presentation.id %>/delete">Delete</a>]</li>
+<% end %>
+</ul>
+

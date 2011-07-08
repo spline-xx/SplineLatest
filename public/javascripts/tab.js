@@ -55,13 +55,13 @@ window.setInterval(function(){
    }
   
   	
-  	document.getElementById("timeline").style.left=y+"px";
+  	
   	document.getElementById("play_pause").value="pause";
   
   }
   else
   document.getElementById("play_pause").value=y;
-  
+  document.getElementById("timeline").style.left=y+"px";
 	
 }, 1000);
 

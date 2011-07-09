@@ -1,9 +1,61 @@
 <div style="float:left"> <input type="button" onclick="pause()" value="play" id="play_pause" style="width:50px;"></div>
-<div>
+<!--<div>
 <span id="timeline" style="left:65px;position:absolute;float:left;">
 o
 </span>
 <br />
 <hr width="1065px" style="float:left"/>
 
-</div> 
+</div>  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Slider - Snap to increments</title>
+	<link rel="stylesheet" href="/stylesheets/jquery.ui.all.css">
+	<script src="/javascripts/ui/jquery-1.5.1.js"></script>
+  <script src="/javascripts/tab.js"></script>
+	<script src="/javascripts/ui/jquery.ui.core.js"></script>
+	<script src="/javascripts/ui/jquery.ui.widget.js"></script>
+	<script src="/javascripts/ui/jquery.ui.mouse.js"></script>
+	<script src="/javascripts/ui/jquery.ui.slider.js"></script>
+	<link rel="stylesheet" href="/stylesheets/demos.css">
+	<style>
+	#demo-frame > div.demo { padding: 10px !important; };
+	</style>
+	<script>
+	$(function() {
+		$( "#slider" ).slider({
+			value:0,
+			min: 0,
+			max: 3600,
+			step: 1,
+			slide: function( event, ui ) {
+				$( "#amount" ).val(ui.value + " seconds" );
+       change(ui.value)
+			}
+		});
+  $( "#amount" ).val(  "25" +  " seconds" );
+	});
+	</script>
+</head>
+<body>
+
+<div class="demo">
+
+<p>
+	<label for="amount"></label>
+	<input type="label" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+</p>
+
+<div id="slider"></div>
+
+</div><!-- End demo -->
+
+
+
+
+
+</body>
+</html>
+

@@ -6,9 +6,9 @@ var topic=prompt("Please enter the topic","");
 document.getElementById("topic").value=topic;
 if (topic!=null && topic!="")
 autoSubmit.submit();
- 
-  
-  
+
+
+
 };
 
 function change(a){
@@ -19,17 +19,17 @@ function imageS(j)
  		{
  			var x="";
 
- 				x=x+"/images/pausch/img"+(j-1)+".gif"; 
+ 				x=x+"/images/pausch/img"+(j-1)+".gif";
 
  			document.getElementById('imageSource').src=x;
-	
+
 
  		};
  		var j=55;
  		var flag=1;
 		var k=65.0;
-		
-		
+
+
 		//var clipOb=player.getClip(fullDuration);
 		//var dur=clipOb.fullDuration;
 window.setInterval(function(){
@@ -48,21 +48,21 @@ window.setInterval(function(){
   //  var t1=t[i].innerHTML();
    if(Math.round(t[i].innerHTML)<=Math.round(player.getTime()))
     {
-    	
-    	if(Math.round(t[i+3].innerHTML)>=Math.round(player.getTime()))	
+
+    	if(Math.round(t[i+3].innerHTML)>=Math.round(player.getTime()))
     	imageS(t[i+1].innerHTML);
     }
    }
-  
-  	
-  	
+
+
+
   	document.getElementById("play_pause").value="pause";
-  
+
   }
   else
   document.getElementById("play_pause").value=y;
-  document.getElementById("timeline").style.left=y+"px";
-	
+  //document.getElementById("timeline").style.left=y+"px";
+
 }, 1000);
 
 function pause()
@@ -72,7 +72,7 @@ function pause()
 			flag=1;
 			document.getElementById("play_pause").value="play";
 			player.pause();
-			
+
 		}
 			else
 			{
@@ -80,5 +80,6 @@ function pause()
 			document.getElementById("play_pause").value="pause";
 			player.play();
 			}
-	
+
 };
+

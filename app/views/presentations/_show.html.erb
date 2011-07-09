@@ -5,6 +5,9 @@
 	<td bgcolor="#ffffff" onMouseOver="imageS(<%= presentation.ppt_number%>)" onclick="change(<%= presentation.ppt_time%>,<%= presentation.ppt_number%>)"><%= presentation.ppt_topic%></td>
 	<td><%= presentation.ppt_time%></td>
 	<td><%= presentation.ppt_number%></td>
+	<td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+  <td><a href="/presentations/<%= presentation.id %>/delete">Delete</a></td>
 	</tr>
 <% end %>
 </table>
+

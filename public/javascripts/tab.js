@@ -43,13 +43,13 @@ window.setInterval(function(){
 	var t = document.getElementById("topic123").getElementsByTagName("td");
 	if(player.getState()==3)
 	{
-    for ( var i = 1; i < t.length; i+=3 )
+    for ( var i = 1; i < t.length; i+=5 )
     {
   //  var t1=t[i].innerHTML();
    if(Math.round(t[i].innerHTML)<=Math.round(player.getTime()))
     {
 
-    	if(Math.round(t[i+3].innerHTML)>=Math.round(player.getTime()))
+    	if(Math.round(t[i+5].innerHTML)>=Math.round(player.getTime()))
     	imageS(t[i+1].innerHTML);
     }
    }

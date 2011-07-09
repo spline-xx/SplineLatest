@@ -10,6 +10,7 @@ SplineLatest::Application.routes.draw do
   resources :videos
 
  ActionController::Routing::Routes.draw do |map|
+   map.connect 'presentations/:id/delete', :controller=>'presentations', :action=>'destroy'
    map.connect ':controller/:action/:id'
    map.connect ':controller/:action/:id.:format'
    map.connect ':controller/:action'
@@ -71,3 +72,4 @@ SplineLatest::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+

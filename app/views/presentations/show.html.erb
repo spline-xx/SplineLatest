@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ppt url:</b>
+  <%= @presentation.ppt_url %>
+</p>
+
+<p>
+  <b>Ppt topic:</b>
+  <%= @presentation.ppt_topic %>
+</p>
+
+<p>
+  <b>Ppt number:</b>
+  <%= @presentation.ppt_number %>
+</p>
+
+<p>
+  <b>Ppt time:</b>
+  <%= @presentation.ppt_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_presentation_path(@presentation) %> |
+<%= link_to "Back", :controller => "spline", :action => "index" %>
+

@@ -1,4 +1,6 @@
 class PresentationsController < ApplicationController
+
+  before_filter :check_logged_in, :only => [:new, :edit, :update, :destroy]
   # GET /presentations
   # GET /presentations.xml
   def index
@@ -72,13 +74,17 @@ class PresentationsController < ApplicationController
 
   # DELETE /presentations/1
   # DELETE /presentations/1.xml
-  def destroy
+     def destroy
     @presentation = Presentation.find(params[:id])
     @presentation.destroy
+redirect_to '/spline/index'
 
-    respond_to do |format|
-      format.html { redirect_to(presentations_url) }
-      format.xml  { head :ok }
+  end
+private
+  def check_logged_in
+    authenticate_or_request_with_http_basic("Presentation") do |username, password|
+      username == "admin" && password == "p"
     end
   end
 end
+
